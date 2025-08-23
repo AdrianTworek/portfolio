@@ -1,34 +1,34 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Adrian Tworek | Software Engineer',
+  title: "Adrian Tworek | Software Engineer",
   description:
-    'Portfolio website of Adrian Tworek, a software engineer specializing in full-stack development, TypeScript, Go, and Python. Explore projects, experience, and contact information.',
+    "Portfolio website of Adrian Tworek, a software engineer specializing in full-stack development, TypeScript, Go, and Python. Explore projects, experience, and contact information.",
   keywords: [
-    'Adrian Tworek',
-    'Software Engineer',
-    'Web Developer',
-    'Full-Stack Developer',
-    'Programmer',
-    'Programming',
-    'TypeScript',
-    'Go',
-    'Python',
-    'React',
-    'Angular',
-    'Next.js',
-    'Portfolio',
-    'Projects',
+    "Adrian Tworek",
+    "Software Engineer",
+    "Web Developer",
+    "Full-Stack Developer",
+    "Programmer",
+    "Programming",
+    "TypeScript",
+    "Go",
+    "Python",
+    "React",
+    "Angular",
+    "Next.js",
+    "Portfolio",
+    "Projects",
   ],
   authors: [
     {
-      name: 'Adrian Tworek',
+      name: "Adrian Tworek",
       // url: "https://yourdomain.com"
     },
   ],
-  creator: 'Adrian Tworek',
-  publisher: 'Adrian Tworek',
+  creator: "Adrian Tworek",
+  publisher: "Adrian Tworek",
   // metadataBase: new URL("https://yourdomain.com"),
   openGraph: {},
   twitter: {},
