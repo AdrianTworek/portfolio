@@ -5,18 +5,37 @@
     --color-background: #ffffff;
     --color-text: #0f172a;
     --color-primary: #6d28d9;
+    --color-primary-foreground: #ffffff;
     --color-secondary: #06b6d4;
     --color-accent: #3b82f6;
     --color-muted: #64748b;
+    --color-muted-foreground: #94a3b8;
   }
 
   [data-theme="dark"] {
     --color-background: #0f172a;
     --color-text: #f1f5f9;
     --color-primary: #8b5cf6;
+    --color-primary-foreground: #ffffff;
     --color-secondary: #22d3ee;
     --color-accent: #60a5fa;
     --color-muted: #94a3b8;
+    --color-muted-foreground: #94a3b8;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  *:focus:not(:focus-visible) {
+    @apply outline-none;
   }
 
   body {
@@ -41,7 +60,9 @@
   --color-background: var(--color-background);
   --color-text: var(--color-text);
   --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
   --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
 }

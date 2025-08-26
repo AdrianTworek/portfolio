@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Navbar } from "@/components/navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,7 +60,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${space_grotesk.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Navbar />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
