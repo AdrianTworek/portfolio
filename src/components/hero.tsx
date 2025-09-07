@@ -1,9 +1,9 @@
 "use client";
 
+import { Download, Mail } from "lucide-react";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { Button } from "./ui/button";
-import { Download, Mail } from "lucide-react";
 
 export const Hero = () => {
   return (

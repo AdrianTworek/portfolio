@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { experienceData } from '@/content/data';
-import { SectionHeader } from './ui/section-header';
-import { cn } from '@/lib/utils';
+import * as React from "react";
+import { experienceData } from "@/content/data";
+import { cn } from "@/lib/utils";
+import { SectionHeader } from "./ui/section-header";
 
 export const Experience = () => {
   return (
@@ -86,10 +86,10 @@ export const Experience = () => {
                     {/* Technologies */}
                     <div
                       className={cn(
-                        'flex flex-wrap gap-2 my-8',
+                        "flex flex-wrap gap-2 my-8",
                         idx !== item.entries.length - 1
-                          ? 'border-b border-accent/20 pb-10'
-                          : 'border-0'
+                          ? "border-b border-accent/20 pb-10"
+                          : "border-0",
                       )}
                     >
                       {entry.technologies.map((tech) => (
