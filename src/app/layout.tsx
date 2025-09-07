@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${space_grotesk.variable} antialiased`}
+        className={`${inter.variable} ${space_grotesk.variable} antialiased selection:bg-accent selection:text-white`}
       >
         <ThemeProvider>
           <Navbar />
