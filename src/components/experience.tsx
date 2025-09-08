@@ -70,7 +70,7 @@ export const Experience = () => {
 
                     {/* Responsibilities */}
                     <div className="flex flex-col gap-2 mt-8">
-                      <p className="text-sm lg:text-base text-muted-foreground font-medium">
+                      <p className="text-sm lg:text-base text-muted-foreground font-medium mb-2">
                         🔎 Responsibilities:
                       </p>
                       <ul className="flex flex-col gap-2 list-disc pl-4 text-sm">
