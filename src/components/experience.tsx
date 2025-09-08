@@ -1,13 +1,15 @@
 import * as React from "react";
 import { experienceData } from "@/content/data";
 import { cn } from "@/lib/utils";
+import { AnimatedSection } from "./animations/animated-section";
 import { SectionHeader } from "./ui/section-header";
 
 export const Experience = () => {
   return (
-    <section
+    <AnimatedSection
       id="experience"
       className="max-w-3xl min-h-screen mx-auto px-8 py-12 lg:py-16"
+      animation="slideLeft"
     >
       <SectionHeader>&lt;experience /&gt;</SectionHeader>
 
@@ -108,6 +110,6 @@ export const Experience = () => {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
