@@ -31,7 +31,7 @@ export const Experience = () => {
               </div>
 
               {/* Content card */}
-              <div className="flex-1 border border-primary/20 rounded-xl p-6 shadow-lg shadow-primary/10 hover:shadow-xl hover:shadow-primary/20 transition-all duration-500 ease-in-out">
+              <div className="flex-1 border border-primary/50 rounded-xl p-6 shadow-lg shadow-primary/20 hover:border-primary/90 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500 ease-in-out">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4 gap-4">
                   <div>
