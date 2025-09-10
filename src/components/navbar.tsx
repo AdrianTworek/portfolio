@@ -4,6 +4,7 @@ import { Github, Linkedin, MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "motion/react";
 
 interface NavLinkItem {
   label: string;
@@ -18,6 +19,8 @@ const navLinks: NavLinkItem[] = [
 ];
 
 const SCROLL_Y_THRESHOLD = 100;
+
+const MotionLink = motion(Link);
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -87,12 +90,15 @@ export const Navbar = () => {
           aria-label="Main navigation"
         >
           {/* Logo */}
-          <Link
+          <MotionLink
             href="/"
-            className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-2xl font-medium tracking-tight hover:scale-105 transition-transform duration-200"
+            className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-2xl font-medium tracking-tight"
+            whileHover={{ scale: 1.05 }}
+            whileFocus={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             AT
-          </Link>
+          </MotionLink>
 
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-baseline space-x-8">
@@ -141,7 +147,7 @@ export const Navbar = () => {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden rounded-md text-text hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary z-50"
+            className="lg:hidden rounded-md text-text hover:cursor-pointer z-50"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
           >
@@ -152,30 +158,36 @@ export const Navbar = () => {
       </header>
 
       {/* Mobile menu */}
-      {isMobileMenuOpen && (
-        <nav
-          id="mobile-menu"
-          className={cn(
-            "lg:hidden fixed top-20 left-0 right-0 bottom-0 z-40 bg-background/95 backdrop-blur-sm",
-            isMobileMenuOpen ? "block" : "hidden",
-          )}
-          aria-label="Mobile navigation"
-        >
-          <ul className="h-full flex flex-col items-center justify-center gap-6 text-xl font-medium text-text">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="text-muted-foreground hover:text-white hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-cyan-500/20 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
-                  onClick={(e) => handleSmoothScroll(e, link.href)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.nav
+            id="mobile-menu"
+            className={cn(
+              "lg:hidden fixed top-20 left-0 right-0 bottom-0 z-40 bg-background/95 backdrop-blur-sm",
+              isMobileMenuOpen ? "block" : "hidden",
+            )}
+            aria-label="Mobile navigation"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <ul className="h-full flex flex-col items-center justify-center gap-6 text-xl font-medium text-text">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-white hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-cyan-500/20 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300"
+                    onClick={(e) => handleSmoothScroll(e, link.href)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </>
   );
 };
