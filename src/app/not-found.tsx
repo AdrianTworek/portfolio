@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { motion } from 'motion/react';
-import { Home } from 'lucide-react';
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
+import { Home } from "lucide-react";
 
 export default function NotFound() {
   const router = useRouter();
@@ -62,7 +62,7 @@ export default function NotFound() {
           leftIcon={<Home size={16} />}
           size="lg"
           className="w-full sm:w-auto"
-          onClick={() => router.push('/')}
+          onClick={() => router.push("/")}
         >
           Go Home
         </Button>
