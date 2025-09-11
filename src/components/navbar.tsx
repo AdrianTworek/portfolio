@@ -20,7 +20,7 @@ const navLinks: NavLinkItem[] = [
 
 const SCROLL_Y_THRESHOLD = 100;
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
