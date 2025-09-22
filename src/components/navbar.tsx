@@ -1,10 +1,10 @@
 "use client";
 
 import { Github, Linkedin, MenuIcon, XIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
 
 interface NavLinkItem {
   label: string;

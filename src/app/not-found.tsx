@@ -1,9 +1,9 @@
 "use client";
 
+import { Home } from "lucide-react";
+import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
-import { Home } from "lucide-react";
 
 export default function NotFound() {
   const router = useRouter();

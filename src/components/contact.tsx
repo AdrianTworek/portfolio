@@ -1,15 +1,15 @@
 "use client";
 
-import * as React from "react";
-import { AnimatedSection } from "./animations/animated-section";
-import { SectionHeader } from "./ui/section-header";
-import { Button } from "./ui/button";
-import {
-  sendContactEmail,
-  type SendContactEmailState,
-} from "@/app/server/actions";
 import { AlertCircleIcon, CheckCircleIcon, Mail, SendIcon } from "lucide-react";
 import { motion } from "motion/react";
+import * as React from "react";
+import {
+  type SendContactEmailState,
+  sendContactEmail,
+} from "@/app/server/actions";
+import { AnimatedSection } from "./animations/animated-section";
+import { Button } from "./ui/button";
+import { SectionHeader } from "./ui/section-header";
 
 const initialState: SendContactEmailState = {
   success: false,
