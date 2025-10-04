@@ -7,8 +7,27 @@ import { Typewriter } from "react-simple-typewriter";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Adrian_Tworek_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section className="min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-12 lg:py-16 gap-12">
+    <section
+      id="hero"
+      className="min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-8 py-12 lg:py-16 gap-12"
+    >
       {/* Text section */}
       <motion.div
         className="flex-1 text-center lg:text-left"
@@ -66,13 +85,15 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.9 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Button
             type="button"
             leftIcon={<Mail size={16} />}
             size="md"
             className="w-full max-w-[360px]"
+            onClick={handleScrollToContact}
+            aria-label="Scroll to contact section"
           >
             Get in touch
           </Button>
@@ -82,6 +103,8 @@ export const Hero = () => {
             leftIcon={<Download size={16} />}
             size="md"
             className="w-full max-w-[360px]"
+            onClick={handleDownloadResume}
+            aria-label="Download resume"
           >
             Download Resume
           </Button>
