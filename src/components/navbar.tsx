@@ -131,7 +131,7 @@ export const Navbar = () => {
               />
             </Link>
             <Link
-              href="https://github.com/AdrianTworek/"
+              href="https://www.github.com/AdrianTworek/"
               target="_blank"
               title="GitHub"
               aria-label="Visit my GitHub profile"

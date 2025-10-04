@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
 const inter = Inter({
@@ -63,6 +64,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
