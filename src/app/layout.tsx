@@ -39,12 +39,12 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Adrian Tworek",
-      // url: "https://yourdomain.com"
+      url: "https://www.adriantworek.com",
     },
   ],
   creator: "Adrian Tworek",
   publisher: "Adrian Tworek",
-  // metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://www.adriantworek.com"),
   openGraph: {},
   twitter: {},
   icons: [],
