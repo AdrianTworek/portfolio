@@ -16,13 +16,13 @@ interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: "3",
+    id: "4",
     title: "Full-Stack Developer",
     company: "Apptimia",
-    period: "NOV 2024 - PRESENT",
+    period: "JUL 2025 - PRESENT",
     entries: [
       {
-        id: "3-3",
+        id: "4-1",
         descriptions: [
           `Geospatial asset management platform designed to help organizations track and visualize assets on interactive maps, enabling smarter and location-aware decision making.`,
         ],
@@ -60,6 +60,15 @@ export const experienceData: ExperienceItem[] = [
           "Playwright",
         ],
       },
+    ],
+    type: "full-time",
+  },
+  {
+    id: "3",
+    title: "Full-Stack / Python Developer",
+    company: "Apptimia",
+    period: "NOV 2024 - JUN 2025",
+    entries: [
       {
         id: "3-2",
         descriptions: [`Quadruped Robot Dog`],
