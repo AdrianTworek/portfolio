@@ -56,7 +56,7 @@ export const Contact = () => {
   return (
     <AnimatedSection
       id="contact"
-      className="max-w-3xl min-h-screen mx-auto px-8 py-12 lg:py-16"
+      className="max-w-3xl min-h-screen md:min-h-[80vh] mx-auto px-8 py-12 lg:py-16"
       animation="slideLeft"
     >
       <SectionHeader>&lt;contact /&gt;</SectionHeader>

@@ -8,7 +8,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-20 overflow-hidden bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border-t border-muted/20">
+    <footer className="relative mt-12 overflow-hidden bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border-t border-muted/20">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(109,40,217,0.1),transparent_50%)] opacity-50 pointer-events-none" />
 
