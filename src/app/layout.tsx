@@ -61,7 +61,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
-      <SpeedInsights />
       <body
         className={`${inter.variable} ${space_grotesk.variable} antialiased selection:bg-accent selection:text-white`}
       >
@@ -70,6 +69,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
