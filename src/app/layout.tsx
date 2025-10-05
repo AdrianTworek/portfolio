@@ -60,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? ""} />
+      <GoogleTagManager gtmId={process.env.GTM_ID ?? ""} />
       <body
         className={`${inter.variable} ${space_grotesk.variable} antialiased selection:bg-accent selection:text-white`}
       >
