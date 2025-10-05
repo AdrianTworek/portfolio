@@ -20,7 +20,7 @@ const space_grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Adrian Tworek | Software Engineer",
   description:
-    "Portfolio website of Adrian Tworek, a software engineer specializing in full-stack development, TypeScript, Go, and Python. Explore projects, experience, and contact information.",
+    "Portfolio website of Adrian Tworek, a software engineer specializing in full-stack development, TypeScript, Python, and Go. Explore projects, experience, and contact information.",
   keywords: [
     "Adrian Tworek",
     "Software Engineer",
