@@ -50,7 +50,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.adriantworek.com"),
   openGraph: {},
   twitter: {},
-  icons: [],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
