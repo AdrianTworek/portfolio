@@ -126,6 +126,7 @@ export const Hero = () => {
           height={400}
           className="w-full max-w-[250px] md:max-w-[300px] lg:max-w-[400px] h-auto rounded-2xl shadow-xl border border-secondary drop-shadow-[0_0_30px_rgba(139,92,246,0.7)]"
           priority
+          fetchPriority="high"
         />
       </motion.div>
     </section>
