@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./theme-toggle";
 
 interface NavLinkItem {
   label: string;
@@ -141,6 +142,8 @@ export const Navbar = () => {
                 size={20}
               />
             </Link>
+            {/* Theme toggle */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -184,6 +187,10 @@ export const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              {/* Theme toggle */}
+              <li>
+                <ThemeToggle />
+              </li>
             </ul>
           </motion.nav>
         )}
