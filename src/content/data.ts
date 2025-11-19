@@ -17,7 +17,7 @@ interface ExperienceItem {
 export const experienceData: ExperienceItem[] = [
   {
     id: "4",
-    title: "Full-Stack Developer",
+    title: "Backend / DevOps Engineer",
     company: "Apptimia",
     period: "JUL 2025 - PRESENT",
     entries: [
@@ -172,7 +172,7 @@ export const experienceData: ExperienceItem[] = [
   },
   {
     id: "1",
-    title: "Junior Front-End Developer",
+    title: "Junior Frontend Developer",
     company: "Apptimia",
     period: "JUL 2022 - DEC 2022",
     entries: [
