@@ -1,3 +1,18 @@
+interface HeroData {
+  typewriterWords: string[];
+  subtitle: string;
+}
+
+export const heroData: HeroData = {
+  typewriterWords: [
+    "Insightful Software Engineer",
+    "Full-Stack Developer",
+    "Building the Future",
+  ],
+  subtitle:
+    "I love building modern, scalable, and user-focused applications. This portfolio showcases my journey projects, and experiences as a developer.",
+};
+
 interface ExperienceEntry {
   id: string;
   descriptions: string[];

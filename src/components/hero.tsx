@@ -4,6 +4,7 @@ import { Download, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
+import { heroData } from "@/content/data";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
@@ -55,11 +56,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Typewriter
-            words={[
-              "Insightful Software Engineer",
-              "Full-Stack Developer",
-              "Building the Future",
-            ]}
+            words={heroData.typewriterWords}
             loop
             cursor
             cursorStyle="|"
@@ -74,9 +71,7 @@ export const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          I love building modern, scalable, and user-focused applications. This
-          portfolio showcases my journey, projects, and experiences as a
-          developer.
+          {heroData.subtitle}
         </motion.p>
 
         {/* CTA buttons */}
