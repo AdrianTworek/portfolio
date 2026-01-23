@@ -1,8 +1,4 @@
-import { AboutMe } from "@/components/about-me";
-import { Contact } from "@/components/contact";
-import { Experience } from "@/components/experience";
-import { Hero } from "@/components/hero";
-import { Projects } from "@/components/projects";
+import { AboutMe, Contact, Experience, Hero, Projects } from "@/components";
 
 export default function Home() {
   return (

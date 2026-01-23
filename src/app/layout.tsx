@@ -4,9 +4,7 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { ScrollToTop } from "@/components/scroll-to-top";
+import { Footer, Navbar, ScrollToTop } from "@/components";
 
 const inter = Inter({
   subsets: ["latin"],
