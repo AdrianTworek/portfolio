@@ -215,3 +215,110 @@ export const experienceData: ExperienceItem[] = [
     type: "full-time",
   },
 ];
+
+interface SkillGroup {
+  category: string;
+  items: string[];
+}
+
+interface ValueItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface FunFactItem {
+  icon: string;
+  text: string;
+}
+
+interface AboutData {
+  intro: string;
+  paragraphs: string[];
+  skills: SkillGroup[];
+  values: ValueItem[];
+  currentFocus: string;
+  funFacts: FunFactItem[];
+}
+
+export const aboutData: AboutData = {
+  intro:
+    "I'm a software engineer based in 🇵🇱 Poland, passionate about crafting elegant solutions to complex problems.",
+  paragraphs: [
+    "My journey in tech started with curiosity about how things work under the hood. Today, I thrive at the intersection of backend architecture, DevOps, and frontend development — building systems that are not just functional, but delightful to use and maintain.",
+    "I believe in clean code, thoughtful design patterns, and the power of automation. Whether it's orchestrating infrastructure, designing APIs, or creating pixel-perfect UIs — I approach every challenge with the same philosophy: understand deeply, then execute precisely.",
+    "Deliver. Make end users happy. Enjoy the process.",
+  ],
+  skills: [
+    {
+      category: "Languages",
+      items: ["TypeScript", "Python", "Go"],
+    },
+    {
+      category: "Frontend",
+      items: [
+        "React",
+        "Angular",
+        "Next.js",
+        "TailwindCSS",
+        "TanStack Query",
+        "Redux / Zustand",
+        "Jest / Vitest",
+        "RTL",
+        "Playwright",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Django",
+        "Django REST Framework",
+        "FastAPI",
+        "Node.js",
+        "Express / NestJS",
+        "PostgreSQL",
+        "Redis",
+      ],
+    },
+    {
+      category: "DevOps",
+      items: ["Docker", "CI/CD", "GitHub Actions", "IaC", "AWS"],
+    },
+  ],
+  values: [
+    {
+      icon: "🎯",
+      title: "Precision",
+      description:
+        "Every line of code has purpose. No shortcuts, no tech debt by choice.",
+    },
+    {
+      icon: "🔄",
+      title: "Iteration",
+      description:
+        "Ship fast, learn faster. Continuous improvement over perfection paralysis.",
+    },
+    {
+      icon: "🤝",
+      title: "Collaboration",
+      description:
+        "Great software is built by great teams. Clear communication is a superpower. Don't be shy to ask questions and share your knowledge.",
+    },
+    {
+      icon: "📚",
+      title: "Learning",
+      description:
+        "Technology evolves daily. Staying curious is non-negotiable.",
+    },
+  ],
+  currentFocus:
+    "Currently exploring DevOps, distributed systems, cloud infrastructure, and the art of building resilient microservices. Always learning, always shipping.",
+  funFacts: [
+    {
+      icon: "✨",
+      text: "Big fan of Harry Potter series 🧙‍♂️",
+    },
+    { icon: "🎮", text: "Gamer since... always? 😅" },
+    { icon: "✈️", text: "Travel lover" },
+  ],
+};
