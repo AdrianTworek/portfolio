@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Navbar />
+          <ScrollToTop />
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
