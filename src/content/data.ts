@@ -318,7 +318,7 @@ export const aboutData: AboutData = {
       icon: "✨",
       text: "Big fan of Harry Potter series 🧙‍♂️",
     },
-    { icon: "🎮", text: "Gamer since... always? 😅" },
     { icon: "✈️", text: "Travel lover" },
+    { icon: "🎮", text: "Gamer since... always? 😅" },
   ],
 };

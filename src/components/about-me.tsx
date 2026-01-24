@@ -163,11 +163,10 @@ export const AboutMe = () => {
               <motion.div
                 key={fact.text}
                 className="flex items-center gap-3 p-3 rounded-lg border border-muted/20 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.9 + idx * 0.05 }}
-                whileHover={{ x: 4 }}
               >
                 <span className="text-lg shrink-0">{fact.icon}</span>
                 <span className="text-sm text-muted-foreground">
