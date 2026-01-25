@@ -322,3 +322,109 @@ export const aboutData: AboutData = {
     { icon: "🎮", text: "Gamer since... always? 😅" },
   ],
 };
+
+export interface ProjectLink {
+  type: "github" | "live";
+  url: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  longDescription?: string;
+  image?: string;
+  tags: string[];
+  links: ProjectLink[];
+  featured?: boolean;
+  status?: "active" | "archived" | "wip";
+  year?: string;
+}
+
+export const projectsData: Project[] = [
+  {
+    id: "atlasnap",
+    title: "Atlasnap",
+    description: "Travel memory storage and organization SaaS",
+    tags: ["N/A"],
+    links: [
+      { type: "github", url: "https://github.com/AdrianTworek/atlasnap" },
+    ],
+    featured: true,
+    status: "wip",
+    year: "2026",
+  },
+  {
+    id: "workIT",
+    title: "workIT",
+    description:
+      "Web application supporting recruitment process in IT companies. Created as an engineering thesis application.",
+    longDescription:
+      "This repository consists of the source code of created application supporting recruitment process. From the employer's point of view, the application simplifies offer creation with specific job description, candidates aggregation and mechanisms that support choosing potentially the best candidate. As a candidate, you can specify your preferences and expectations for your dream job.",
+    image: "/project-screenshots/work-it.png",
+    tags: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "React",
+      "Redux Toolkit",
+      "RTK Query",
+      "MUI",
+    ],
+    links: [{ type: "github", url: "https://github.com/AdrianTworek/work-it" }],
+    featured: true,
+    status: "archived",
+    year: "2023",
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio",
+    description:
+      "Personal portfolio website showcasing my tech journey, professional experience and projects I've worked on.",
+    image: "/project-screenshots/portfolio.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "motion"],
+    status: "active",
+    links: [
+      {
+        type: "github",
+        url: "https://github.com/AdrianTworek/portfolio",
+      },
+      {
+        type: "live",
+        url: "https://www.adriantworek.com",
+      },
+    ],
+    year: "2025",
+  },
+  {
+    id: "polling-app",
+    title: "Polling App",
+    description: "Angular web application for creating and managing polls.",
+    image: "/project-screenshots/polling-app.png",
+    tags: ["Angular", "signals", "RxJS", "angularfire", "PrimeNG"],
+    links: [
+      { type: "github", url: "https://github.com/AdrianTworek/polling-app" },
+    ],
+    featured: false,
+    status: "active",
+    year: "2024",
+  },
+  {
+    id: "adiSocials",
+    title: "adiSocials",
+    description:
+      "Social Media App created with Next.js, TailwindCSS and Firebase 🤍💙🧡",
+    image: "/project-screenshots/adiSocials.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Firebase", "react-chartjs"],
+    links: [
+      { type: "github", url: "https://github.com/AdrianTworek/adi-socials" },
+      { type: "live", url: "https://adi-socials.vercel.app" },
+    ],
+    featured: false,
+    status: "active",
+    year: "2022",
+  },
+];
