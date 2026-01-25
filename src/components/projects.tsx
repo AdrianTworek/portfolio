@@ -51,9 +51,9 @@ export const Projects = () => {
         {sortedProjects.map((project, idx) => (
           <motion.article
             key={project.id}
-            className="group relative p-6 rounded-xl shadow-lg border border-primary/50 bg-gradient-to-br from-primary/5 to-transparent hover:border-primary/90 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="relative p-6 rounded-xl shadow-lg border border-primary/50 bg-gradient-to-br from-primary/5 to-transparent hover:border-primary/90 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 + idx * 0.1 }}
           >
@@ -70,7 +70,7 @@ export const Projects = () => {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-1">
-                  <h3 className="text-xl font-bold text-text group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-text transition-colors">
                     {project.title}
                   </h3>
                   {project.status && (
