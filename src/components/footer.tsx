@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 
 export const Footer = () => {
+  const launchYear = 2025;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -44,7 +45,7 @@ export const Footer = () => {
             </p>
 
             <p className="text-sm text-muted-foreground/80">
-              &copy; {currentYear}. All rights reserved.
+              &copy; {launchYear}-{currentYear}. All rights reserved.
             </p>
           </motion.div>
         </div>
